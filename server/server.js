@@ -5,6 +5,7 @@
    const cors=require("cors");
    const userRoute=require("./routes/userRoute")
    const mongoose=require("mongoose");
+   require("dotenv").config();
 
    //Body Parser
    app.use(bodyparser.urlencoded({extended:true}))
@@ -17,6 +18,6 @@
    app.use("/",userRoute)
   const Port=process.env.PORT ||8000
    app.listen(Port,()=>{
-    console.log(`Server run on port$(Port)`)
+    console.log(`Server run on port ${Port}`)
    })
    

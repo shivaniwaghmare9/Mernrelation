@@ -20,8 +20,8 @@ const Registration=()=>{
   }
   return(
     <>
-    <h2 className='h2'>User Data </h2>
-           <Form id="from">
+    <h2 className='h33'>User Data </h2>
+           <Form id="form">
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Enter Username</Form.Label>
         <Form.Control type="text" name="username" onChange={handleInput} />
