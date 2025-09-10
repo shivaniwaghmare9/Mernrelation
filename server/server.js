@@ -3,7 +3,7 @@
    const app=express();
    const bodyparser=require("body-parser");
    const cors=require("cors");
- 
+   const userRoute=require("./routes/userRoute")
    const mongoose=require("mongoose");
 
    //Body Parser
@@ -14,6 +14,7 @@
       console.log("database connected succesfully!!")
    })
 
+   app.use("/",userRoute)
   const Port=process.env.PORT ||8000
    app.listen(Port,()=>{
     console.log(`Server run on port$(Port)`)
