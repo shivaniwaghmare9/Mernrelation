@@ -15,7 +15,7 @@ const Addmore=()=>{
         <>
          <h3 className="h33">Add Books</h3>
          Enter Bookname: <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/><br/><br/>
-         Enter Price: <input type="text" value={price} onChange={(e)=>{setPrice(e.target.value)}}/><br/><br/>
+         Enter Price:   <input type="text" value={price} onChange={(e)=>{setPrice(e.target.value)}}/><br/><br/>
          <button onClick={handleSubmit}>Save!</button>
         </>
     )

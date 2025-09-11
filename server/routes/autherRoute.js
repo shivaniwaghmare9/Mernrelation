@@ -5,4 +5,6 @@ const autherController=require("../controller/autherController")
 
 route.post("/authersave",autherController.addAuther);
 route.get("/autherdisplay",autherController.autherDisplay);
+route.post("/booksave",autherController.bookSave);
+
 module.exports=route;
