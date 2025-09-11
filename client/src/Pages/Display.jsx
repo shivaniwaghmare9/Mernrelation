@@ -6,7 +6,7 @@ const Display=()=>{
 
     const loadData=async()=>{
         let api="http://localhost:8000/display";
-    const response=await axios.get(api,input);
+    const response=await axios.get(api);
     console.log(response.data);
     setMydata(response.data)
     }
@@ -40,7 +40,7 @@ const Display=()=>{
             </tr>
            </thead>
            <tbody>
-
+            {ans}
            </tbody>
        </Table>
 
