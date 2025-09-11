@@ -14,7 +14,7 @@ const Registration=()=>{
   }
   const handleSubmit=async(e)=>{
     e.preventDefault();
-    let api="http://localhost:8000/usersave";
+    let api="http://localhost:8000/save";
     const response=await axios.post(api,input);
     console.log(response);
   }
