@@ -68,9 +68,10 @@
 import  Table from "react-bootstrap/Table"
 import axios from "axios"
 import { useState,useEffect } from "react"
+import {useNavigate} from "react-router-dom"
 const Display=()=>{
     const [myData,setMydata]=useState([]);
-
+    const navigate=useNavigate();
     const loadData=async()=>{
         let api="http://localhost:8000/autherdisplay";
         const response=await axios.get(api);
@@ -82,6 +83,9 @@ const Display=()=>{
         loadData();
     },[])
 
+    const addBook=(id)=>{
+      navigate(`/addmore/${id}`)
+    }
     const ans=myData.map((key)=>{
         return(
             <>
