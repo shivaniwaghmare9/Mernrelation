@@ -64,7 +64,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {ToastContainer,toast} from "react-toastify"
 import { useState } from "react";
-import axios from "axios"
+import axios from 'axios';
 const Registration=()=>{
   const [input,setInput]=useState("");
   const handleInput=(e)=>{
@@ -77,7 +77,7 @@ const Registration=()=>{
     e.preventDefault();
     let api="http://localhost:8000/authersave";
     try {
-      const response=await axios.post(api,input);
+    const response=await axios.post(api,input);
     console.log(response);
     toast.success("auther successfully registered")
       

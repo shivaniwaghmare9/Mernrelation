@@ -11,7 +11,7 @@ const addAuther=async(req,res)=>{
         price:price,
        
     })
-    console.log(auther)
+    // console.log(auther)
     const auther=await autherModel.create({
         authername:authername,
         email:email,

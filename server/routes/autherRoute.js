@@ -4,5 +4,5 @@ const route=express.Router();
 const autherController=require("../controller/autherController")
 
 route.post("/authersave",autherController.addAuther);
-route.get("/display",autherController.autherDisplay);
+route.get("/autherdisplay",autherController.autherDisplay);
 module.exports=route;

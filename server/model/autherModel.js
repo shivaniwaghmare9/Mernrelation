@@ -7,4 +7,4 @@ const autherSchema=new mongoose.Schema({
     email:String,
     booksid:[{type:mongoose.Schema.Types.ObjectId,ref:"book"}]
 })
-module.exports=mongoose.model("user",autherSchema)
+module.exports=mongoose.model("auther",autherSchema)
