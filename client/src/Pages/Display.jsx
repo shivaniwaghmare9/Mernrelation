@@ -68,6 +68,7 @@
 import  Table from "react-bootstrap/Table"
 import axios from "axios"
 import { useState,useEffect } from "react"
+import { FaCirclePlus } from "react-icons/fa6";
 import {useNavigate} from "react-router-dom"
 const Display=()=>{
     const [myData,setMydata]=useState([]);
@@ -104,7 +105,8 @@ const Display=()=>{
                     })}
                 </td>
                 <td>
-                    <button onClick={()=>{addBook(key._id)}}>Add</button>
+                    <FaCirclePlus onClick={()=>{addBook(key._id)}}/>
+                    {/* <button onClick={()=>{addBook(key._id)}}>Add</button> */}
                 </td>
             </tr>
             </>
@@ -119,7 +121,7 @@ const Display=()=>{
                 <th>AUTHERNAME</th>
                 <th>EMAIL</th>
                 <th>BOOKS DETAILS/PRICE</th>
-                <th>USERNAME</th>
+                <th>ADDMORE</th>
             </tr>
            </thead>
            <tbody>
