@@ -2,6 +2,7 @@
 //========================================================ONE-TO-ONE RELATION=======================================================================
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {ToastContainer,toast} from "react-toastify"
 import { useState } from "react";
 import axios from "axios"
 const Registration=()=>{
@@ -15,8 +16,15 @@ const Registration=()=>{
   const handleSubmit=async(e)=>{
     e.preventDefault();
     let api="http://localhost:8000/save";
-    const response=await axios.post(api,input);
+    try {
+      const response=await axios.post(api,input);
     console.log(response);
+    toast.success("user successfully registered")
+      
+    } catch (error) {
+      console.log(error)
+    }
+    
   }
   return(
     <>
@@ -43,6 +51,7 @@ const Registration=()=>{
         Submit
       </Button>
     </Form>
+    <ToastContainer/>
     </>
   )
 }

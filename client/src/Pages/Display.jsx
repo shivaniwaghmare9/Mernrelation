@@ -1,4 +1,6 @@
-import  Table from "react-router-dom"
+
+//========================================================ONE-TO-ONE RELATION================================================================
+import  Table from "react-bootstrap/Table"
 import axios from "axios"
 import { useState,useEffect } from "react"
 const Display=()=>{
@@ -48,4 +50,4 @@ const Display=()=>{
         </>
     )
 }
-export default Display
+export default Display;
