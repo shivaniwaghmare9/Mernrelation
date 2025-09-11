@@ -3,8 +3,8 @@
 
 const mongoose=require("mongoose");
 const autherSchema=new mongoose.Schema({
-    firstname:String,
-    lastname:String,
+    authername:String,
+    email:String,
     booksid:[{type:mongoose.Schema.Types.ObjectId,ref:"book"}]
 })
 module.exports=mongoose.model("user",autherSchema)
